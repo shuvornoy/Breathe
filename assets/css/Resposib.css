@@ -1,0 +1,274 @@
+
+@media (max-width: 1024px) {
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-menu.active {
+    max-height: 600px; 
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+  .mobile-btn {
+    margin-top: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+    /*===================*/
+  .hero {
+    justify-content: center;
+    text-align: center;
+    padding: 0 30px;
+  }
+  .hero-content {
+    margin-top: 80px;
+    max-width: 100%;
+  }
+ .customers {
+    display: flex;
+    justify-content: start;
+  }
+  .mediam{
+    margin-left: 28px;
+      
+  }
+
+  .hero h1 { 
+    font-size: 48px; 
+  }
+  .hero p {
+    font-size: 16px; 
+  }
+
+/*==============*/
+.product-container {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  }
+
+  .product-images {
+    width: 100%;
+    height: 450px;
+    margin: 0 auto;
+    margin-top: 0;
+    
+  }
+  .main-img {
+  width: 80%;
+  height: 400px;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 80px;
+  justify-content: center;
+}
+
+
+  .product-details {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .rating {
+ justify-content: center;
+ margin-top: 80px;
+}
+.price{
+  justify-content: center;
+}
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+.features-item {
+  justify-content: center;
+}
+.features-icon{
+  display: flex;
+  gap: 80px;
+}
+
+.payments {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+};
+@media (min-width: 1025px) {
+  .mobile-btn {
+    display: none; 
+  }
+}
+/*================== Mobile ====================*/
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .customers {
+    display: flex;
+    justify-content: start;
+}
+  .hero-content {
+    margin-top: 0;
+    max-width: 100%;
+}
+  .mediam{
+    margin-left: 28px;
+    margin-top: 50px;
+}
+  .hero h1 { 
+    font-size: 32px; 
+    line-height: 135%; 
+}
+  .hero p { 
+    font-size: 14px; 
+}
+  .customers img { 
+    width: 34px; 
+    height: 34px; 
+}
+  .customers span {
+     font-size: 12px; 
+}
+  .btn { 
+    font-size: 14px; 
+    padding: 12px 20px; 
+    margin-top: 24px; 
+}
+
+  /*===============*/
+
+  .product-images {
+    width: 100%;
+    height: 420px;
+    margin: 0 auto;
+    margin-top: 0;
+  }
+  .thumbnails img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .product-details h2 {
+    font-size: 28px;
+  }
+
+  .price {
+    font-size: 32px;
+  }
+
+  .old-price {
+    font-size: 18px;
+  }
+
+  .discount {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  .product-details h3 {
+    font-size: 22px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+    .features {
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .features-icon {
+    width: 100%; 
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .features-item p {
+    font-size: 12px;
+  }
+
+  .add-btn {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  .payments img {
+    width: 50px;
+    height: auto;
+  }
+}
+
+/*===================== Small Mobile ==============================*/
+@media (max-width: 375px){
+  .mediam{
+    margin-left: 7px !important;
+    margin-top: 50px;
+  }
+    
+};
+@media (max-width: 480px) {
+  .hero h1 { 
+    font-size: 26px; 
+    line-height: 130%; 
+  }
+  .hero p { 
+    font-size: 13px; 
+  }
+  .btn {
+    font-size: 13px; 
+    padding: 10px 18px; 
+  }
+  .thumbnails img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .product-details h2 {
+    font-size: 24px;
+  }
+
+  .price {
+    font-size: 26px;
+  }
+
+  .old-price {
+    font-size: 16px;
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+
+  .add-btn {
+    font-size: 13px;
+    padding: 10px 18px;
+  }
+
+  .payments img {
+        width: 50px !important;
+        height: auto;
+    }
+}

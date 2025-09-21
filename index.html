@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/Resposib.css">
+    <title>Breathe</title>
+</head>
+<body>
+    <!--=============Header=================-->
+<header class="navbar">
+  <div class="container">
+    <div class="logo">logo</div>
+    <nav class="nav-menu" id="navMenu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Why It Works</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Before & After</a></li>
+        <li><a href="#">Science</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Shop Bundles</a></li>
+        
+      </ul>
+    </nav>
+    <a href="#" class="cta-btn desktop-btn">Contact Us →</a>
+    <div class="menu-toggle" id="menuToggle">☰</div>
+  </div>
+</header>
+<!--===============Banner==================-->
+<section>
+    <div class=" hero">
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="mediam">
+                    <div class="hero-content">
+                    <div class="customers">
+                        <img src="./assets/img/banner/Avatar.png" alt="user1">
+                        <img src="./assets/img/banner/Avatar (2).png" alt="user2">
+                        <img src="./assets/img/banner/Avatar (1).png" alt="user3">
+                        <span>25k Happy Customers</span>
+                    </div>
+                    <h1 class="banner-title">Breathe better, <br> live better!</h1>
+                    <p>Discover how effortless breathing can enhance your life.<br>Take the first step Today!</p>
+                    <button class="btn">Shop Now →</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=================Product==================-->
+<section class="product-section">
+  <div class="container product-container">
+    <div class="product-images">
+      <img id="mainImage" src="assets/img/product/p1.png" alt="Product" class="main-img">
+      <div class="thumbnails">
+        <img src="assets/img/product/p1.png" alt="thumb1" class="active" onclick="changeImage(this)">
+        <img src="assets/img/product/p2.png" alt="thumb2" onclick="changeImage(this)">
+        <img src="assets/img/product/p3.png" alt="thumb3" onclick="changeImage(this)">
+        <img src="assets/img/product/p4.png" alt="thumb4" onclick="changeImage(this)">
+      </div>
+    </div>
+    <div class="product-details">
+      <div class="rating">
+        <div >
+            <img src="assets/img/product/Group.svg" alt="svg">
+            <img src="assets/img/product/Group.svg" alt="svg">
+            <img src="assets/img/product/Group.svg" alt="svg">
+            <img src="assets/img/product/Group.svg" alt="svg">
+            <img src="assets/img/product/Group.svg" alt="svg">
+        </div> 
+        <p>4.5 <span>(500+ Reviews)</span></p> 
+      </div>
+      <h2>Noseclip</h2>
+      <p class="price">$12.00 <span class="old-price">$20.00</span> <span class="discount">Save 10%</span></p>
+      <h3>Description:</h3>
+      <p class="desc">A nasal clip is a small device typically used to pinch or secure the nostrils for various purposes, such as during sports, medical treatments, or personal health practices. It is usually made of flexible or padded materials to ensure comfort and a secure fit. Common uses include:
+      </p>
+
+      <div class="features">
+        <div class="features-icon">
+            <div class="features-item">
+              <img src="./assets/img/product/Frame.svg" alt="logo">
+              <p>Stop snoring</p>
+            </div>
+            <div class="features-item">
+                <img src="./assets/img/product/Frame.svg" alt="logo">
+                <p>Stop snoring</p>
+            </div>
+        </div>
+        <div class="features-icon">
+            <div class="features-item">
+              <img src="./assets/img/product/Frame.svg" alt="logo">
+              <p>Optimized Airflow</p>
+            </div>
+            <div class="features-item">
+              <img src="./assets/img/product/Frame.svg" alt="logo">
+              <p>100% Drug Free</p>
+            </div>
+        </div>
+      </div>
+
+      <button class="add-btn">Add to Cart →</button>
+      <div class="payments">
+        <img src="assets/img/product/1.svg" alt="Apple Pay">
+        <img src="assets/img/product/2.svg" alt="Google Pay">
+        <img src="assets/img/product/3.svg" alt="Mastercard">
+        <img src="assets/img/product/4.svg" alt="Shop Pay">
+        <img src="assets/img/product/5.svg" alt="Visa">
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <button onclick="toggleAccordion(this)">Sizing information</button>
+          <div class="content">Details about sizing...</div>
+        </div>
+        <div class="accordion-item">
+          <button onclick="toggleAccordion(this)">Free resizing</button>
+          <div class="content">Details about resizing...</div>
+        </div>
+        <div class="accordion-item">
+          <button onclick="toggleAccordion(this)">Money back guarantee & free returns</button>
+          <div class="content">Details about returns...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+  menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
+function changeImage(element) {
+  const main = document.getElementById('mainImage');
+  main.src = element.src;
+  document.querySelectorAll('.thumbnails img').forEach(i => i.classList.remove('active'));
+  element.classList.add('active');
+}
+
+
+
+  // Accordion Function
+  function toggleAccordion(button) {
+    const allItems = document.querySelectorAll('.accordion .accordion-item');
+    allItems.forEach(item => {
+    const content = item.querySelector('.content');
+    const btn = item.querySelector('button');
+      if (btn === button) {
+        content.style.display = content.style.display === "block" ? "none" : "block";
+        btn.classList.toggle("active");
+      } else {
+        content.style.display = "none";
+        btn.classList.remove("active");
+      }
+    });
+  }
+  </script>
+</body>
+</html>
